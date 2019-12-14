@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tip Calculator</title>
+    <link rel="shortcut icon" href="./img/title-icon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- font-family: 'Amatic SC', cursive; -->
+    <!-- font-family: 'Domine', serif; -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC|Domine&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Tip Calculator</h1>
+      <hr />
+      <form>
+        <label for="bill_amount">
+          <p class="label_p">How much was the bill?</p>
+        </label>
+        <input
+          class="input_field"
+          id="bill_amount"
+          name="bill"
+          type="number"
+          placeholder="300"
+          value=""
+        />
+
+        <label for="satisfaction">
+          <p class="label_p">How was the service?</p>
+        </label>
+
+        <select name="service" id="service_quality">
+          <option disabled selected hidden value="0"
+            >---Choose an Option---</option
+          >
+          <option value="0.3">30&#37; &#45; Outstanding</option>
+          <option value="0.2">20&#37; &#45; Good</option>
+          <option value="0.15">15&#37; &#45; It is OK</option>
+          <option value="0.1">10&#37; &#45; Bad</option>
+          <option value="0.05">5&#37; &#45; Terrible</option>
+        </select>
+
+        <label for="people_count">
+          <p class="label_p">How many people are sharing the bill?</p>
+        </label>
+        <input
+          class="input_field"
+          id="people_count"
+          name="people"
+          type="number"
+          placeholder="2"
+        />
+      </form>
+
+      <button id="calculate_btn">Calculate</button>
+      <button id="reset_btn">Reset</button>
+
+      <div class="total_tip">
+        <div class="tip_value">
+          <sup>$</sup><span id="each_tip">0.00</span>
+          <small>-Each</small>
+        </div>
+        <div class="tip_value">
+          <sup>$</sup><span id="total_tip">0.00</span>
+          <small>-Total</small>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
